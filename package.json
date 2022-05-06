@@ -1,0 +1,29 @@
+{
+  "name": "swa-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-api": "cd api && npm start",
+    "start-app": "cd app && npm start",
+    "start-dev": "concurrently \"npm:start-api\" \"npm:start-app\" ",
+    "start-swa": "swa start http://localhost:3000 --api-location http://localhost:7071",
+    "start": " npm run start-dev && npm run swa-up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kshingaims/staticwebapp-with-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kshingaims/staticwebapp-with-api/issues"
+  },
+  "homepage": "https://github.com/kshingaims/staticwebapp-with-api#readme",
+  "devDependencies": {
+    "@azure/static-web-apps-cli": "^0.8.3",
+    "azure-functions-core-tools": "^3.0.4502",
+    "concurrently": "^7.1.0"
+  }
+}
